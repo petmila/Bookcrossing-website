@@ -1,5 +1,5 @@
 ### Сайт для буккросинга
 * Макет основной страницы
-![avatar](./img/main_model.png)
+![avatar](./images/main_model.png)
 
 Петренко Людмила М33001
