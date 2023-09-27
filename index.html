@@ -1,10 +1,65 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="ru">
   <head>
-    
+    <title>Буккроссинг - основная страница</title>
+    <!-- <link href="outline.css" rel="stylesheet"> -->
+    <meta name="keywords" content="книги, обмен, буккроссинг">
+    <meta name="description" content="Старым книгам можно дать новую жизнь">
+    <meta charset="utf-8">
   </head>
   <body>
-    <h1>
-      Hello World, I'm Петренко Людмила
-    </h1>
+    <header>
+      <h1>
+        <i>Буккроссинг</i>
+      </h1>
+      <pre>
+╔╗───────╔╗──────────╔═╗╔═╗╔╗────╔═╗
+║╚╗╔═╗╔═╗║╠╗╔═╗╔╦╗╔═╗║═╣║═╣╠╣╔═╦╗║╬║
+║╬║║╬║║╬║║═╣║═╣║╔╝║╬║╠═║╠═║║║║║║║╠╗║
+╚═╝╚═╝╚═╝╚╩╝╚═╝╚╝─╚═╝╚═╝╚═╝╚╝╚╩═╝╚═╝
+      </pre>
+      <blockquote>
+        <p>Читатель проживает <em>тысячу</em> жизней, прежде чем умрет. <br> 
+          Человек, который никогда не читает, проживает только <em>одну</em>.</p>
+        <cite>Джордж Мартин</cite>
+      </blockquote>
+      <nav class="bookmark_menu">
+        <ul>
+          <li><b>Регистрация</b></li>
+          <li><b>Вход</b></li>
+          <li><b>Профиль</b></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <form>
+          <input type="text" size="80%" id="name" placeholder="Поиск по названию или автору книги">
+          <input type="button" value="Искать">
+        </form>
+        <div class="searh_result">
+          <form>
+            <input type="button" value="<">
+            <input type="button" value=">">
+          </form>
+          <div class="book_information">
+            <i>*место для фото книги*</i> 
+            <p><b>Название:</b><br>
+            <b>Автор:</b><br>
+            <b>Год издания:</b><br>
+            <b>Состояние:</b></p>
+            <form>
+              <input type="button" value="Обменяться">
+            </form>
+          </div>
+        </div> 
+      </section>
+    </main>
+    <footer>
+      <p>Петренко Людмила, М33001</p>
+      <p>Github: @petmila</p>
+    </footer>
+
   </body>
 </html>
