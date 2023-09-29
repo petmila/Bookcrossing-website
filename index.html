@@ -3,54 +3,62 @@
 <html lang="ru">
   <head>
     <title>Буккроссинг - основная страница</title>
-    <!-- <link href="outline.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bookmark_style.css" rel="stylesheet">
     <meta name="keywords" content="книги, обмен, буккроссинг">
     <meta name="description" content="Старым книгам можно дать новую жизнь">
     <meta charset="utf-8">
   </head>
   <body>
     <header>
-      <h1>
-        <i>Буккроссинг</i>
-      </h1>
-      <pre>
-╔╗───────╔╗──────────╔═╗╔═╗╔╗────╔═╗
-║╚╗╔═╗╔═╗║╠╗╔═╗╔╦╗╔═╗║═╣║═╣╠╣╔═╦╗║╬║
-║╬║║╬║║╬║║═╣║═╣║╔╝║╬║╠═║╠═║║║║║║║╠╗║
-╚═╝╚═╝╚═╝╚╩╝╚═╝╚╝─╚═╝╚═╝╚═╝╚╝╚╩═╝╚═╝
-      </pre>
-      <blockquote>
-        <p>Читатель проживает <em>тысячу</em> жизней, прежде чем умрет. <br> 
-          Человек, который никогда не читает, проживает только <em>одну</em>.</p>
-        <cite>Джордж Мартин</cite>
-      </blockquote>
+      <img class="main_icon" src="images/icon_2.png">
+      <div class="site_name">
+        <h1>
+          Буккроссинг
+        </h1>
+        <blockquote class="jmartin">
+          <p>Читатель проживает <em>тысячу</em> жизней, прежде чем умрет. <br> 
+            Человек, который никогда не читает, проживает только <em>одну</em>.</p>
+          <cite>Джордж Мартин</cite>
+        </blockquote>
+      </div>
       <nav class="bookmark_menu">
         <ul>
-          <li><b>Регистрация</b></li>
-          <li><b>Вход</b></li>
-          <li><b>Профиль</b></li>
+          <li><a class="bookmark" href="">Регистрация</a></li>
+          <li><a class="bookmark" href="">Вход</a></li>
+          <li><a class="bookmark" href="profile.html">Профиль</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section>
         <form>
-          <input type="text" size="80%" id="name" placeholder="Поиск по названию или автору книги">
-          <input type="button" value="Искать">
+          <input class="search_text" type="text" placeholder="Поиск по названию или автору книги">
+          <input class="button" type="button" value="Искать">
         </form>
         <div class="searh_result">
           <form>
-            <input type="button" value="<">
-            <input type="button" value=">">
+            <input class="button" type="button" value="<">
+            <input class="button" type="button" value=">">
           </form>
           <div class="book_information">
-            <i>*место для фото книги*</i> 
-            <p><b>Название:</b><br>
-            <b>Автор:</b><br>
+            <img class="book_image" src="images/book_1.jpg">
+            <p><b>Название:</b> Сборник повестей<br>
+            <b>Автор:</b> Булычев Кир<br>
             <b>Год издания:</b><br>
-            <b>Состояние:</b></p>
+            <b>Состояние:</b> Нормальное</p>
             <form>
-              <input type="button" value="Обменяться">
+              <input class="button" type="button" value="Обменяться">
+            </form>
+          </div>
+          <div class="book_information">
+            <img class="book_image" src="images/book_2.jpg">
+            <p><b>Название:</b> За темными лесами<br>
+            <b>Автор:</b> Нил Гейман<br>
+            <b>Год издания:</b><br>
+            <b>Состояние:</b> Отличное</p>
+            <form>
+              <input class="button" type="button" value="Обменяться">
             </form>
           </div>
         </div> 

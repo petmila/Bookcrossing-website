@@ -1,0 +1,76 @@
+body {
+  background-color: #fff6eb;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: left;
+    font-family: Bradley Hand, cursive;
+    padding: 5px 10px 0px 10px;
+    margin: 5px;
+  }
+
+p, cite, input, textarea {
+    font-size: 12px;
+    font-family: Bradley Hand, cursive;
+}
+.button {
+    font-size: 12px;
+    font-family: Bradley Hand, cursive;
+    background-color: #ffc5af;
+    border: 6px solid #f18053;
+    border-radius: 25px;
+    padding: 2px 10px;
+    margin: 5px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.jmartin {
+    padding: 0px 15px;
+    margin: 5px;
+    background-color: #fff6eb;
+  }
+.main_icon {
+    width: 80px;
+    margin: 15px;
+}
+.profile_icon {
+  width: 100px;
+}
+.profile_block {
+  border: 3px;
+  background-color: #FFE9B0;
+  border: 6px solid #f18053;
+  border-radius: 25px;
+  padding: 20px 20px;
+  margin: 5px;
+}
+.profile_name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.profile_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.client_input {
+  padding: 5px 5px;
+  margin: auto;
+}
+footer {
+  text-align: center;
+}

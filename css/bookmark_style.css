@@ -1,0 +1,39 @@
+.bookmark_menu {
+    font-size: 15px;
+    font-family: Bradley Hand, cursive;
+    text-align: right;
+  }
+
+header > .bookmark_menu {
+    -webkit-flex: auto;
+    flex: auto;
+  }
+
+.bookmark {
+    padding: 5px 30px;
+    margin: 5px;
+    background-color: #FFE9B0;
+    color: black;
+    border: 1px;
+    display: inline-block;
+  }
+
+.book_information {
+    border: 3px;
+    background-color: #FFE9B0;
+    border: 6px solid #f18053;
+    border-radius: 25px;
+    padding: 20px 20px;
+    margin: 5px;
+}
+
+.book_image {
+  border: 3px;
+  border: 6px solid #f18053;
+  border-radius: 25px;
+  width: 40%
+}
+
+.search_result {
+    display: inline;
+}
