@@ -10,7 +10,7 @@ header {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: calc(1em + 4vw);
     text-align: left;
     font-family: Bradley Hand, cursive;
     padding: 5px 10px 0px 10px;
@@ -18,11 +18,11 @@ h1 {
   }
 
 p, cite, input, textarea {
-    font-size: 12px;
+    font-size: calc(0.5em + 1vw);
     font-family: Bradley Hand, cursive;
 }
 .button {
-    font-size: 12px;
+    font-size: calc(0.5em + 1vw);
     font-family: Bradley Hand, cursive;
     background-color: #ffc5af;
     border: 6px solid #f18053;
@@ -35,42 +35,21 @@ li {
     list-style-type: none;
 }
 
+.search_area {
+  padding: 5px 13% 5px 13%;
+}
+
 .jmartin {
     padding: 0px 15px;
     margin: 5px;
     background-color: #fff6eb;
   }
 .main_icon {
-    width: 80px;
+    width: 10%;
     margin: 15px;
+    padding: 5px;
 }
-.profile_icon {
-  width: 100px;
-}
-.profile_block {
-  border: 3px;
-  background-color: #FFE9B0;
-  border: 6px solid #f18053;
-  border-radius: 25px;
-  padding: 20px 20px;
-  margin: 5px;
-}
-.profile_name {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.profile_info {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.client_input {
-  padding: 5px 5px;
-  margin: auto;
-}
+
 footer {
   text-align: center;
 }
