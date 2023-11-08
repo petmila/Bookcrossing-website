@@ -3,9 +3,9 @@
 <html lang="ru">
   <head>
     <title>Профиль на сайте буккроссинга</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/main_style.css" rel="stylesheet">
     <link href="css/profile.css" rel="stylesheet">
-    <link href="css/bookmark_style.css" rel="stylesheet">
+    <link href="css/common_style.css" rel="stylesheet">
     <meta name="keywords" content="книги, обмен, буккроссинг, профиль">
     <meta name="description" content="Старым книгам можно дать новую жизнь">
     <meta charset="utf-8">
@@ -15,38 +15,38 @@
     <header>
       <nav class="bookmark_menu">
         <ul>
-          <li><a class="bookmark" href="index.html">Поиск по сайту</a></li>
+          <li><a class="bookmark_menu__bookmark" href="index.html">Поиск по сайту</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="profile_block">
-        <div class="profile_name">
-          <img class="profile_icon" src="images/profile_icon_2.png">
-          <h1 class="profile_h1">Имя пользователя</h1>
+        <div class="profile_block__profile_name">
+          <img class="profile_block__profile_icon" src="images/profile_icon_2.png">
+          <h1 class="profile_block__profile_h1">Имя пользователя</h1>
         </div>
-        <div class="profile_info">
-          <form class="client_input">
+        <div class="profile_block__profile_info">
+          <form class="profile_block__client_input">
             <p><textarea name="comment" cols="40" rows="1" placeholder="Контакты для связи с вами"></textarea></p>
             <p><textarea name="comment" cols="40" rows="4" placeholder="Ваши книжные предпочтения"></textarea></p>
-            <input class="button_profile" type="button" value="Сохранить изменения">
-          </form>
-          <form>
+            <input class="profile_block__button_profile" type="button" value="Сохранить изменения">
+          <!-- </form>
+          <form> -->
             <p><textarea name="comment" cols="40" rows="1" placeholder="Название книги"></textarea></p>
             <p><textarea name="comment" cols="40" rows="1" placeholder="Автор книги"></textarea></p>
             <p><textarea name="comment" cols="40" rows="1" placeholder="Год издания"></textarea></p>
             <p><textarea name="comment" cols="40" rows="1" placeholder="Состояние книги"></textarea></p>
-            <input class="button_profile" type="button" value="Добавить свою книгу на сайт">
+            <input class="profile_block__button_profile" type="button" value="Добавить свою книгу на сайт">
           </form>
         </div>
       </div>
       <section>
         <nav class="profile_horisontal_menu">
-          <ul id="profile_horisontal">
-            <li>мои книги</li>
-            <li>на рассмотрении</li>
-            <li>хотите взять?</li>
-            <li>завершенные обмены</li>
+          <ul>
+            <li class="profile_horisontal_menu__item">мои книги</li>
+            <li class="profile_horisontal_menu__item">на рассмотрении</li>
+            <li class="profile_horisontal_menu__item">хотите взять?</li>
+            <li class="profile_horisontal_menu__item">завершенные обмены</li>
           </ul>
         </nav>
         <div class="profile_block">
@@ -69,9 +69,10 @@
       
     </main>
     <footer>
-      <p>Петренко Людмила, М33001</p>
-      <p>Github: @petmila</p>
+      <div class="footer__about_author">
+        <p>Петренко Людмила, М33001</p>
+        <p>Github: @petmila</p>
+      </div>
     </footer>
-
   </body>
 </html>
