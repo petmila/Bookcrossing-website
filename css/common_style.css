@@ -1,15 +1,19 @@
+@font-face {
+  font-family: "Bradley";
+  src: url("../fonts/Bradleys/ Pen.ttf");
+}
+
 .bookmark_menu {
     font-size: calc(1em + 1vw);
-    font-family: Bradley Hand, cursive;
+    font-family: Bradley, cursive;
     text-align: right;
   }
 
 header > .bookmark_menu {
-    -webkit-flex: auto;
     flex: auto;
   }
 
-.bookmark {
+.bookmark_menu__bookmark {
     padding: 5px 30px;
     margin: 5px;
     background-color: #FFE9B0;
@@ -32,11 +36,11 @@ header > .bookmark_menu {
     align-items: flex-start;
 }
 
-.book_info_text {
+.book_information__book_info_text {
   padding: 0px 20px 20px 20px
 }
 
-.book_image {
+.book_information__book_image {
   border: 3px;
   border: 6px solid #f18053;
   border-radius: 25px;
@@ -44,11 +48,3 @@ header > .bookmark_menu {
   margin: 5px;
 }
 
-.search_text {
-  width: 80%;
-  margin: 10px;
-  padding: 5px;
-}
-.search_result {
-    display: inline;
-}

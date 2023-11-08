@@ -3,8 +3,8 @@
 <html lang="ru">
   <head>
     <title>Буккроссинг - основная страница</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/bookmark_style.css" rel="stylesheet">
+    <link href="css/main_style.css" rel="stylesheet">
+    <link href="css/common_style.css" rel="stylesheet">
     <meta name="keywords" content="книги, обмен, буккроссинг">
     <meta name="description" content="Старым книгам можно дать новую жизнь">
     <meta charset="utf-8">
@@ -13,10 +13,8 @@
     <header>
       <img class="main_icon" src="images/icon_2.png">
       <div class="site_name">
-        <h1>
-          Буккроссинг
-        </h1>
-        <blockquote class="jmartin">
+        <h1 class="site_name__site_h1">Буккроссинг</h1>
+        <blockquote class="site_name__jmartin">
           <p>Читатель проживает <em>тысячу</em> жизней, прежде чем умрет. <br> 
             Человек, который никогда не читает, проживает только <em>одну</em>.</p>
           <cite>Джордж Мартин</cite>
@@ -24,23 +22,22 @@
       </div>
       <nav class="bookmark_menu">
         <ul>
-          <li><a class="bookmark" href="">Регистрация</a></li>
-          <li><a class="bookmark" href="">Вход</a></li>
-          <li><a class="bookmark" href="profile.html">Профиль</a></li>
+          <li><a class="bookmark_menu__bookmark" href="">Регистрация</a></li>
+          <li><a class="bookmark_menu__bookmark" href="">Вход</a></li>
+          <li><a class="bookmark_menu__bookmark" href="profile.html">Профиль</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <!-- <aside></aside> -->
       <section class="search_area">
-        <form>
-          <input class="search_text" type="text" placeholder="Поиск по названию или автору книги">
+        <form class="search_area__search_line">
+          <input class="search_area__search_text" type="text" placeholder="Поиск по названию или автору книги">
           <input class="button" type="button" value="Искать">
         </form>
-        <div class="searh_result">
+        <div class="search_area__searh_result">
           <div class="book_information">
-            <img class="book_image" src="images/book_1.jpg">
-            <div class="book_info_text">
+            <img class="book_information__book_image" src="images/book_1.jpg">
+            <div class="book_information__book_info_text">
               <p><b>Название:</b> Сборник повестей<br>
                 <b>Автор:</b> Булычев Кир<br>
                 <b>Год издания:</b> 2019<br>
@@ -52,8 +49,8 @@
             </div>
           </div>
           <div class="book_information">
-            <img class="book_image" src="images/book_2.jpg">
-            <div class="book_info_text">
+            <img class="book_information__book_image" src="images/book_2.jpg">
+            <div class="book_information__book_info_text">
               <p><b>Название:</b> За темными лесами<br>
                 <b>Автор:</b> Нил Гейман<br>
                 <b>Год издания:</b> 2018<br>
@@ -66,12 +63,12 @@
           </div>
         </div> 
       </section>
-      <!-- <aside></aside> -->
     </main>
     <footer>
-      <p>Петренко Людмила, М33001</p>
-      <p>Github: @petmila</p>
+      <div class="footer__about_author">
+        <p>Петренко Людмила, М33001</p>
+        <p>Github: @petmila</p>
+      </div>
     </footer>
-
   </body>
 </html>
