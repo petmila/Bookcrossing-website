@@ -1,8 +1,11 @@
 body {
-  background-color: #f18053;
+  background-color: #985033;
   height: 100%;
   position: relative;
   }
+header {
+  background-image: url("../images/header_background.jpg");
+}
 
 .profile_horisontal_menu {
   text-align: center;
@@ -15,34 +18,50 @@ body {
 
 .profile_horisontal_menu__item {
     display: inline;
-    font-size: calc(0.65em + 1vw);
-    font-family: Bradley, cursive;;
+    font-size: calc(0.55em + 1vw);
+    font-family: Bradley, cursive;
     padding: 5px 5px;
     margin: 5px;
     background-color: #FFE9B0;
     color: black;
-    border: 1px;
+    border: 1px solid #985033;
+    border-radius: 25px;
 }
 .profile_block {
   border: 3px;
   background-color: #FFE9B0;
-  border: 6px solid #f18053;
+  border: 6px solid #985033;;
   border-radius: 25px;
   padding: 20px 20px;
   margin: 5px 13%;
+}
+.profile {
+  background-color: #FFE9B0;
+  padding: 5px 5px;
+  margin: 5px;
+  border: 6px solid #f18053;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .profile_block__profile_h1 {
   font-size: calc(1em + 2vw);
   color: #ce6d46;
   text-align: left;
-  font-family: Bradley, cursive;;
+  font-family: Bradley, cursive;
   padding: 5px 10px 0px 10px;
   margin: 5px;
 }
+.profile_block__textarea {
+  background-color: #fef8c7;
+  border-color: #ce6d46;
+}
 .profile_block__button_profile {
   font-size: calc(0.5em + 1vw);
-  font-family: Bradley, cursive;;
-  background-color: #fffcf5;
+  font-family: Bradley, cursive;
+  background-color: #fef8c7;
   border: 3px solid #f18053;
   border-radius: 5px;
   padding: 2px 10px;
@@ -51,19 +70,25 @@ body {
 .profile_block__profile_icon {
   width: 100px;
 }
-.profile_block__profile_name {
+/* .profile_block__profile_name {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-}
-.profile_block__profile_info {
+} */
+/* .profile_block__profile_info {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-}
+} */
 .profile_block__client_input {
   padding: 5px 5px;
   margin: auto;
 }
+/* main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+} */
