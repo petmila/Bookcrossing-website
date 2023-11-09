@@ -6,6 +6,7 @@
     <link href="css/main_style.css" rel="stylesheet">
     <link href="css/profile.css" rel="stylesheet">
     <link href="css/common_style.css" rel="stylesheet">
+    <script src="js/profile.js"></script>
     <meta name="keywords" content="книги, обмен, буккроссинг, профиль">
     <meta name="description" content="Старым книгам можно дать новую жизнь">
     <meta charset="utf-8">
@@ -16,57 +17,98 @@
       <nav class="bookmark_menu">
         <ul>
           <li><a class="bookmark_menu__bookmark" href="index.html">Поиск по сайту</a></li>
+          <li><a class="bookmark_menu__bookmark" href="book_creation.html">Добавить книгу</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="profile_block">
-        <div class="profile_block__profile_name">
-          <img class="profile_block__profile_icon" src="images/profile_icon_2.png">
-          <h1 class="profile_block__profile_h1">Имя пользователя</h1>
-        </div>
-        <div class="profile_block__profile_info">
-          <form class="profile_block__client_input">
-            <p><textarea name="comment" cols="40" rows="1" placeholder="Контакты для связи с вами"></textarea></p>
-            <p><textarea name="comment" cols="40" rows="4" placeholder="Ваши книжные предпочтения"></textarea></p>
-            <input class="profile_block__button_profile" type="button" value="Сохранить изменения">
-          <!-- </form>
-          <form> -->
-            <p><textarea name="comment" cols="40" rows="1" placeholder="Название книги"></textarea></p>
-            <p><textarea name="comment" cols="40" rows="1" placeholder="Автор книги"></textarea></p>
-            <p><textarea name="comment" cols="40" rows="1" placeholder="Год издания"></textarea></p>
-            <p><textarea name="comment" cols="40" rows="1" placeholder="Состояние книги"></textarea></p>
-            <input class="profile_block__button_profile" type="button" value="Добавить свою книгу на сайт">
-          </form>
-        </div>
-      </div>
       <section>
         <nav class="profile_horisontal_menu">
           <ul>
-            <li class="profile_horisontal_menu__item">мои книги</li>
-            <li class="profile_horisontal_menu__item">на рассмотрении</li>
-            <li class="profile_horisontal_menu__item">хотите взять?</li>
-            <li class="profile_horisontal_menu__item">завершенные обмены</li>
+            <button class="profile_horisontal_menu__item" onclick="openProfile(event, 'my_books')">мои книги</button>
+            <button class="profile_horisontal_menu__item" onclick="openProfile(event, 'books_in_process')">на рассмотрении</button>
+            <button class="profile_horisontal_menu__item" onclick="openProfile(event, 'suggestions_for_me')">хотите взять?</button>
+            <button class="profile_horisontal_menu__item" onclick="openProfile(event, 'successfull_excanges')">завершенные обмены</button>
           </ul>
         </nav>
-        <div class="profile_block">
+        <div class="profile_block" id="my_books">
           <div class="book_information">
+            <img class="book_information__book_image" src="images/book_1.jpg">
+            <div class="book_information__book_info_text">
+              <p><b>Название:</b> Сборник повестей<br>
+                <b>Автор:</b> Булычев Кир<br>
+                <b>Год издания:</b> 2019<br>
+                <b>Состояние:</b> Нормальное<br>
+                <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>
+            </div>
+          </div>
+        </div>
+        <div class="profile_block" id="books_in_process">
+          <div class="book_information">
+            <img class="book_information__book_image" src="images/book_1.jpg">
+            <div class="book_information__book_info_text">
+              <p><b>Название:</b> Сборник повестей<br>
+              <b>Автор:</b> Булычев Кир<br>
+              <b>Год издания:</b> 2019<br>
+              <b>Состояние:</b> Нормальное<br>
+              <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile_block" id="suggestions_for_me">
+          <div class="book_information">
+            <img class="book_information__book_image" src="images/book_1.jpg">
+            <div class="book_information__book_info_text">
+              <p><b>Название:</b> Сборник повестей<br>
+                <b>Автор:</b> Булычев Кир<br>
+                <b>Год издания:</b> 2019<br>
+                <b>Состояние:</b> Нормальное<br>
+                <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>
+            </div>
+          </div>
+        </div>
+        <div class="profile_block" id="successfull_excanges">
+          <div class="book_information">
+            <img class="book_information__book_image" src="images/book_1.jpg">
+            <div class="book_information__book_info_text">
+              <p><b>Название:</b> Сборник повестей<br>
+                <b>Автор:</b> Булычев Кир<br>
+                <b>Год издания:</b> 2019<br>
+                <b>Состояние:</b> Нормальное<br>
+                <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>
+            </div>
+          </div>
+        </div>
+          <!-- <div class="book_information_for_exchange">
             <i>*место для фото книги*</i> 
             <p><b>Название:</b><br>
             <b>Автор:</b><br>
             <b>Год издания:</b><br>
             <b>Состояние:</b></p>
-          </div>
-          <div class="book_information_for_exchange">
-            <i>*место для фото книги*</i> 
-            <p><b>Название:</b><br>
-            <b>Автор:</b><br>
-            <b>Год издания:</b><br>
-            <b>Состояние:</b></p>
-          </div>
+          </div> -->
         </div> 
       </section>
-      
+      <!-- <div class="profile">
+        <img class="profile_block__profile_icon" src="images/profile_icon_2.png">
+        <div class="profile_block__profile_name">
+          
+        <div class="profile_block__profile_info">
+          <h1 class="profile_block__profile_h1">Имя пользователя</h1>
+          <form class="profile_block__client_input">
+            <p><textarea class="profile_block__textarea" cols="40" rows="1" placeholder="Контакты для связи с вами"></textarea></p>
+            <p><textarea class="profile_block__textarea" cols="40" rows="4" placeholder="Ваши книжные предпочтения"></textarea></p>
+            <input class="profile_block__button_profile" type="button" value="Сохранить изменения">
+          </form>
+          <form>
+            <p><textarea class="profile_block__textarea" cols="40" rows="1" placeholder="Название книги"></textarea></p>
+            <p><textarea class="profile_block__textarea" cols="40" rows="1" placeholder="Автор книги"></textarea></p>
+            <p><textarea class="profile_block__textarea" cols="40" rows="1" placeholder="Год издания"></textarea></p>
+            <p><textarea class="profile_block__textarea" cols="40" rows="1" placeholder="Состояние книги"></textarea></p>
+            <input class="profile_block__button_profile" type="button" value="Добавить свою книгу на сайт">
+          </form>
+        </div>
+        </div>
+      </div> -->
     </main>
     <footer>
       <div class="footer__about_author">
