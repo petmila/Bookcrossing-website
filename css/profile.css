@@ -16,7 +16,12 @@ header {
   src: url("../fonts/Bradleys/ Pen.ttf");
 }
 
-.profile_horisontal_menu__item {
+.profile_horisontal_menu__button.active, .profile_horisontal_menu__button:hover {
+  background-color: #f18053;
+  color: #FFE9B0;
+}
+
+.profile_horisontal_menu__button {
     display: inline;
     font-size: calc(0.55em + 1vw);
     font-family: Bradley, cursive;
@@ -29,13 +34,51 @@ header {
 }
 .profile_block {
   border: 3px;
-  background-color: #FFE9B0;
-  border: 6px solid #985033;;
+  background-color:  #f18053;
+  border: 6px solid #985033;
   border-radius: 25px;
   padding: 20px 20px;
   margin: 5px 13%;
+  display: none;
 }
-.profile {
+.profile_block__button {
+  font-size: calc(0.5em + 1vw);
+  font-family: Bradley, cursive;
+  background-color: #FFE9B0;
+  border: 6px solid #f18053;
+  border-radius: 25px;
+  padding: 2px 10px;
+  margin: 5px;
+}
+.profile_block__books_in_progress_table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+  row-gap: 5px;
+  background-color: #985033;
+  border-radius: 25px;
+}
+.profile_block__table_header {
+  background-color: #985033;
+  color: #FFE9B0;
+  font-size: calc(0.45em + 1.25vw);;
+  text-align: center;
+}
+.profile_block__table_content:nth-child(4n+3),
+.profile_block__table_content:nth-child(4n) {
+  background-color: #FFE9B0;
+  color: #985033;
+  text-align: center;
+}
+.profile_block__table_content:nth-child(4n+2),
+.profile_block__table_content:nth-child(4n+1) {
+  background-color: #f18053;
+  color: #FFE9B0;
+  text-align: center;
+}
+
+
+/* .profile {
   background-color: #FFE9B0;
   padding: 5px 5px;
   margin: 5px;
@@ -57,8 +100,8 @@ header {
 .profile_block__textarea {
   background-color: #fef8c7;
   border-color: #ce6d46;
-}
-.profile_block__button_profile {
+} */
+/* .profile_block__button_profile {
   font-size: calc(0.5em + 1vw);
   font-family: Bradley, cursive;
   background-color: #fef8c7;
@@ -69,7 +112,7 @@ header {
 }
 .profile_block__profile_icon {
   width: 100px;
-}
+} */
 /* .profile_block__profile_name {
   display: flex;
   flex-direction: row;
@@ -82,10 +125,10 @@ header {
   justify-content: flex-start;
   align-items: flex-start;
 } */
-.profile_block__client_input {
+/* .profile_block__client_input {
   padding: 5px 5px;
   margin: auto;
-}
+} */
 /* main {
   display: flex;
   flex-direction: row;
