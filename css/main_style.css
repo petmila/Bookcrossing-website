@@ -24,12 +24,12 @@ header {
     margin: 5px;
   }
 
-p, cite, input, textarea {
+p, cite, input, textarea, span, a {
     font-size: calc(0.5em + 1vw);
     font-family: Bradley, cursive;
 }
 
-.button {
+.book_information__button {
     font-size: calc(0.5em + 1vw);
     font-family: Bradley, cursive;
     background-color: #ffc5af;
@@ -59,6 +59,16 @@ li {
 }
 .search_area__searh_result {
   display: inline;
+}
+
+.search_area__button {
+  font-size: calc(0.5em + 1vw);
+  font-family: Bradley, cursive;
+  background-color: #ffc5af;
+  border: 6px solid #f18053;
+  border-radius: 25px;
+  padding: 2px 10px;
+  margin: 5px;
 }
 
 .site_name__jmartin {

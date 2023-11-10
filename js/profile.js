@@ -1,18 +1,16 @@
-function openProfile(evt, content_id) {
-    var i, profile_block, tablinks;
+function openProfile(event, content_id) {
+    var i, profile_blocks, buttons;
 
-    profile_block = document.getElementsByClassName("profile_block");
-    for (i = 0; i < profile_block.length; i++) {
-        profile_block[i].style.display = "none";
+    profile_blocks = document.getElementsByClassName("profile_block");
+    for (i = 0; i < profile_blocks.length; i++) {
+        profile_blocks[i].style.display = "none";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("profile_horisontal_menu__item");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    buttons = document.getElementsByClassName("profile_horisontal_menu__button");
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].className = buttons[i].className.replace(" active", "");
     }
 
-    // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(content_id).style.display = "block";
-    evt.currentTarget.className += " active";
+    event.currentTarget.className += " active";
 }

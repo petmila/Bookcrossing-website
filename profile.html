@@ -25,10 +25,10 @@
       <section>
         <nav class="profile_horisontal_menu">
           <ul>
-            <button class="profile_horisontal_menu__item" onclick="openProfile(event, 'my_books')">мои книги</button>
-            <button class="profile_horisontal_menu__item" onclick="openProfile(event, 'books_in_process')">на рассмотрении</button>
-            <button class="profile_horisontal_menu__item" onclick="openProfile(event, 'suggestions_for_me')">хотите взять?</button>
-            <button class="profile_horisontal_menu__item" onclick="openProfile(event, 'successfull_excanges')">завершенные обмены</button>
+            <button class="profile_horisontal_menu__button active" onclick="openProfile(event, 'my_books')">мои книги</button>
+            <button class="profile_horisontal_menu__button" onclick="openProfile(event, 'books_in_process')">на рассмотрении</button>
+            <button class="profile_horisontal_menu__button" onclick="openProfile(event, 'suggestions_for_me')">хотите взять?</button>
+            <button class="profile_horisontal_menu__button" onclick="openProfile(event, 'successfull_excanges')">завершенные обмены</button>
           </ul>
         </nav>
         <div class="profile_block" id="my_books">
@@ -40,53 +40,48 @@
                 <b>Год издания:</b> 2019<br>
                 <b>Состояние:</b> Нормальное<br>
                 <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>
-            </div>
+                <div class="book_information__buttons_line">
+                  <form>
+                    <input class="profile_block__button" type="button" value="Изменить">
+                  </form>
+                  <form>
+                    <input class="profile_block__button" type="button" value="Удалить">
+                  </form>
+                </div>
+              </div>
           </div>
+          <!-- <form>
+            <input class="profile_block__button" type="button" value="+ Добавить книгу">
+          </form> -->
         </div>
+        <script>
+          document.getElementById('my_books').style.display = "block";
+        </script>
         <div class="profile_block" id="books_in_process">
-          <div class="book_information">
-            <img class="book_information__book_image" src="images/book_1.jpg">
-            <div class="book_information__book_info_text">
-              <p><b>Название:</b> Сборник повестей<br>
-              <b>Автор:</b> Булычев Кир<br>
-              <b>Год издания:</b> 2019<br>
-              <b>Состояние:</b> Нормальное<br>
-              <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>              </div>
-            </div>
+          <div class="profile_block__books_in_progress_table">
+            <span class="profile_block__table_header">Ваша книга</span>
+            <span class="profile_block__table_header">Хотите получить взамен</span>
+            <a class="profile_block__table_content" href="book_page.html">За темными лесами. Нил Гейман</a>
+            <a class="profile_block__table_content" href="book_page.html">Сборник. Кир Булычев</a>
+            <a class="profile_block__table_content" href="book_page.html">Название книги</a>
+            <a class="profile_block__table_content" href="book_page.html">Название книги</a>
+            <a class="profile_block__table_content" href="book_page.html">Название книги</a>
+            <a class="profile_block__table_content" href="book_page.html">Название книги</a>
           </div>
         </div>
         <div class="profile_block" id="suggestions_for_me">
-          <div class="book_information">
-            <img class="book_information__book_image" src="images/book_1.jpg">
-            <div class="book_information__book_info_text">
-              <p><b>Название:</b> Сборник повестей<br>
-                <b>Автор:</b> Булычев Кир<br>
-                <b>Год издания:</b> 2019<br>
-                <b>Состояние:</b> Нормальное<br>
-                <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>
-            </div>
+          <div class="profile_block__books_in_progress_table">
+            <span class="profile_block__table_header">Предложение для вас</span>
+            <span class="profile_block__table_header">Просят у вас взамен</span>
+            <a class="profile_block__table_content" href="book_page.html">Сборник. Кир Булычев</a>
+            <a class="profile_block__table_content" href="book_page.html">За темными лесами. Нил Гейман</a>
+            <a class="profile_block__table_content" href="book_page.html">Название книги</a>
+            <a class="profile_block__table_content" href="book_page.html">Название книги</a>
+            <a class="profile_block__table_content" href="book_page.html">Название книги</a>
+            <a class="profile_block__table_content" href="book_page.html">Название книги</a>
           </div>
         </div>
-        <div class="profile_block" id="successfull_excanges">
-          <div class="book_information">
-            <img class="book_information__book_image" src="images/book_1.jpg">
-            <div class="book_information__book_info_text">
-              <p><b>Название:</b> Сборник повестей<br>
-                <b>Автор:</b> Булычев Кир<br>
-                <b>Год издания:</b> 2019<br>
-                <b>Состояние:</b> Нормальное<br>
-                <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>
-            </div>
-          </div>
-        </div>
-          <!-- <div class="book_information_for_exchange">
-            <i>*место для фото книги*</i> 
-            <p><b>Название:</b><br>
-            <b>Автор:</b><br>
-            <b>Год издания:</b><br>
-            <b>Состояние:</b></p>
-          </div> -->
-        </div> 
+        <div class="profile_block" id="successfull_excanges"></div>
       </section>
       <!-- <div class="profile">
         <img class="profile_block__profile_icon" src="images/profile_icon_2.png">

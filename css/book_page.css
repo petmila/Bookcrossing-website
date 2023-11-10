@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Bradley";
+    src: url("../fonts/Bradleys/ Pen.ttf");
+  }
+
+body {
+    background-image: url("../images/book_page_background_2_3.jpg~");
+}
+.footer__about_author {
+    color:rgb(176, 143, 103);
+}
