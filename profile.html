@@ -6,7 +6,8 @@
     <link href="css/main_style.css" rel="stylesheet">
     <link href="css/profile.css" rel="stylesheet">
     <link href="css/common_style.css" rel="stylesheet">
-    <script src="js/profile.js"></script>
+    <script src="js/profile.js" async></script>
+    <script src="js/menu.js" async></script>
     <meta name="keywords" content="книги, обмен, буккроссинг, профиль">
     <meta name="description" content="Старым книгам можно дать новую жизнь">
     <meta charset="utf-8">
@@ -16,7 +17,8 @@
     <header>
       <nav class="bookmark_menu">
         <ul>
-          <li><a class="bookmark_menu__bookmark" href="index.html">Поиск по сайту</a></li>
+          <li><a class="bookmark_menu__bookmark" href="index.html">Главная</a></li>
+          <li><a class="bookmark_menu__bookmark" href="profile.html">Профиль</a></li>
           <li><a class="bookmark_menu__bookmark" href="book_creation.html">Добавить книгу</a></li>
         </ul>
       </nav>
@@ -54,9 +56,6 @@
             <input class="profile_block__button" type="button" value="+ Добавить книгу">
           </form> -->
         </div>
-        <script>
-          document.getElementById('my_books').style.display = "block";
-        </script>
         <div class="profile_block" id="books_in_process">
           <div class="profile_block__books_in_progress_table">
             <span class="profile_block__table_header">Ваша книга</span>

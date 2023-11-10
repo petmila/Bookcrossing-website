@@ -14,3 +14,5 @@ function openProfile(event, content_id) {
     document.getElementById(content_id).style.display = "block";
     event.currentTarget.className += " active";
 }
+
+document.getElementById('my_books').style.display = "block";

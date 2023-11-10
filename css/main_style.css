@@ -13,7 +13,7 @@ header {
 
 @font-face {
   font-family: "Bradley";
-  src: url("../fonts/Bradleys/Pen.ttf");
+  src: url("../fonts/BradleysPen.ttf");
 }
 
 .site_name__site_h1 {
@@ -85,8 +85,9 @@ li {
 .footer__about_author {
   text-align: center;
   position: absolute;
-  left: 35%;
+  left: 38%;
   bottom: 0;
+  font-size: calc(0.25em + 0.5vw);
 }
 main {
   padding-bottom: 15%;

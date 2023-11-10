@@ -1,15 +1,17 @@
 // function activeMenu(){
-    var i, menu_items;
+    var i;
+    var current_page = document.location.pathname.split("/").at(-1);
+    var menu_items = document.getElementsByClassName("bookmark_menu__bookmark");
 
-    menu_items = document.getElementsByClassName("bookmark_menu__bookmark");
     for (i = 0; i < menu_items.length; i++) {
-        console.log(menu_items[i].attributes);
-        if (document.location.href === menu_items[i].attributes.href.baseURI){
-            menu_items[i].style.display += " active";
-            console.log("success");
+        menu_items[i].className = menu_items[i].className.replace(" active", "");
+    }
+    
+    for (i = 0; i < menu_items.length; i++) {
+        if (current_page === menu_items[i].attributes.href.value){
+            menu_items[i].className += " active";
         }
     }
-    // console.log(document.location.href);
 // }
 
 // window.addEventListener("load", function(event) {
