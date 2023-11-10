@@ -13,7 +13,7 @@ header {
 
 @font-face {
   font-family: "Bradley";
-  src: url("../fonts/Bradleys/ Pen.ttf");
+  src: url("../fonts/Bradleys/Pen.ttf");
 }
 
 .profile_horisontal_menu__button.active, .profile_horisontal_menu__button:hover {
