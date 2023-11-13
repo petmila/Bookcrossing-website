@@ -1,4 +1,4 @@
-// function activeMenu(){
+
     var i;
     var current_page = document.location.pathname.split("/").at(-1);
     var menu_items = document.getElementsByClassName("bookmark_menu__bookmark");
@@ -12,8 +12,4 @@
             menu_items[i].className += " active";
         }
     }
-// }
 
-// window.addEventListener("load", function(event) {
-//     activeMenu()
-// }, false)

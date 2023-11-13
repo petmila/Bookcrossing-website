@@ -4,8 +4,8 @@
   }
 
 body {
-    background-image: url("../images/book_page_background_2_3.jpg~");
+    background-image: url("../images/book_page_background_2.jpg");
 }
-.footer__about_author {
+.footer__about_author, .footer__load_time {
     color:rgb(176, 143, 103);
 }

@@ -89,6 +89,14 @@ li {
   bottom: 0;
   font-size: calc(0.25em + 0.5vw);
 }
+
+.footer__load_time {
+  text-align: center;
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  font-size: calc(0.25em + 0.7vw);
+}
 main {
   padding-bottom: 15%;
 }
