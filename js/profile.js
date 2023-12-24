@@ -17,7 +17,14 @@ function openProfile(event, content_id) {
 
 function addBookToProfile(event) {
     var add_button_form = event.currentTarget.parentElement;
-    let book_info = createEmptyBookInfo(); 
+    const texts = {
+        name: 'Название:',
+        author: 'Автор:',
+        year: 'Год издания:',
+        condition: 'Состояние:',
+        description: 'Описание:'
+    }
+    let book_info = createBookInfo(texts, true); 
     add_button_form.parentElement.insertBefore(book_info, add_button_form);
 }
 
@@ -40,20 +47,39 @@ function handleBookInfoInputForm(event) {
 
 function saveNewBookInProfile(book_info){
     book_info.querySelector('form').remove();
+    let div_buttons = document.createElement('div');
     let form_buttons = document.createElement("form");
     let delete_button = document.createElement("input");
     delete_button.className = 'profile_block__button';
     delete_button.value = 'Удалить';
     delete_button.type = 'button';
     form_buttons.appendChild(delete_button);
-    book_info.appendChild(form_buttons);
-    let new_book = book_info.parentElement;
-    console.log(JSON.stringify(new_book));
-    // localStorage.setItem(localStorage.length + 1, JSON.stringify(new_book));
-    
+    div_buttons.className = 'book_information__buttons_line';
+    div_buttons.appendChild(form_buttons);
+    book_info.appendChild(div_buttons);
+    let info_lines = book_info.getElementsByClassName('book_information__book_info_line');
+    const new_book_dict = {
+        name: info_lines[0].textContent,
+        author: info_lines[1].textContent,
+        year: info_lines[2].textContent,
+        condition: info_lines[3].textContent,
+        description: info_lines[4].textContent
+    }
+    localStorage.setItem(localStorage.length + 1, JSON.stringify(new_book_dict));
 }
 
-function createEmptyBookInfo() {
+function createBookInfoLine(name) {
+    let line = document.createElement('p');
+    line.className = 'book_information__book_info_line';
+    let b_name = document.createElement('b');
+    let name_content = name.split([':']);
+    b_name.textContent = name_content[0] + ':';
+    line.appendChild(b_name);
+    line.innerHTML += ' ' + name_content[1];
+    return line;
+}
+
+function createBookInfo(texts, required_input_flag) {
     let book_div = document.createElement("div");
     book_div.className = 'book_information';
     let book_image = document.createElement("img");
@@ -61,39 +87,42 @@ function createEmptyBookInfo() {
     book_div.appendChild(book_image);
     let book_text = document.createElement("div");
     book_text.className = 'book_information__book_info_text';
-    book_text.appendChild(createEmptyBookInfoLine('Название:'));
-    book_text.appendChild(createEmptyBookInfoLine('Автор:'));
-    book_text.appendChild(createEmptyBookInfoLine('Год издания:'));
-    book_text.appendChild(createEmptyBookInfoLine('Состояние:'));
-    book_text.appendChild(createEmptyBookInfoLine('Описание:'));
-
-    let form_input = document.createElement("form");
-    form_input.id = 'book_info_input_form'; 
-    let input = document.createElement("input");
-    form_input.addEventListener('submit', handleBookInfoInputForm);
-    form_input.appendChild(input);
-    book_text.appendChild(form_input);
+    book_text.appendChild(createBookInfoLine(texts['name']));
+    book_text.appendChild(createBookInfoLine(texts['author']));
+    book_text.appendChild(createBookInfoLine(texts['year']));
+    book_text.appendChild(createBookInfoLine(texts['condition']));
+    book_text.appendChild(createBookInfoLine(texts['description']));
+    if (required_input_flag){
+        let form_input = document.createElement("form");
+        form_input.id = 'book_info_input_form'; 
+        let input = document.createElement("input");
+        form_input.addEventListener('submit', handleBookInfoInputForm);
+        form_input.appendChild(input);
+        book_text.appendChild(form_input);
+    } else {
+        let div_buttons = document.createElement('div');
+        let form_buttons = document.createElement("form");
+        let delete_button = document.createElement("input");
+        delete_button.className = 'profile_block__button';
+        delete_button.value = 'Удалить';
+        delete_button.type = 'button';
+        form_buttons.appendChild(delete_button);
+        div_buttons.className = 'book_information__buttons_line';
+        div_buttons.appendChild(form_buttons);
+        book_text.appendChild(div_buttons);
+    }
     book_div.appendChild(book_text);
     return book_div;
 }
 
-function createEmptyBookInfoLine(name) {
-    let line = document.createElement('p');
-    line.className = 'book_information__book_info_line';
-    let b_name = document.createElement('b');
-    b_name.textContent = name;
-    line.appendChild(b_name);
-    return line;
-}
-
 (function loadProfileFromLocalStorage(){
-    // localStorage.clear();
-    console.log(localStorage.length);
+    let add_button_form = document.getElementById('book_to_profile_add_button').parentElement;
     if (localStorage.length != 0) {
         for (let i = 0; i < localStorage.length; i++) {
             let id = localStorage.key(i);
             let info = JSON.parse(localStorage.getItem(id));
-            
+            let book = createBookInfo(info, false);
+            add_button_form.parentElement.insertBefore(book, add_button_form);
         }
     }
 }());
