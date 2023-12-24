@@ -48,6 +48,12 @@ header > .bookmark_menu {
   padding: 0px 20px 20px 20px
 }
 
+.book_information__book_info_line {
+  font-size: calc(0.5em + 1vw);
+  font-family: Bradley, cursive;
+  margin: 0px;
+}
+
 .book_information__book_image {
   border: 3px;
   border: 6px solid #f18053;

@@ -48,7 +48,7 @@ header {
   border: 6px solid #f18053;
   border-radius: 25px;
   padding: 2px 10px;
-  margin: 5px;
+  margin: 10px
 }
 .profile_block__books_in_progress_table {
   display: grid;

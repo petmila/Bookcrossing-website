@@ -20,7 +20,6 @@
         <ul>
           <li><a class="bookmark_menu__bookmark" href="index.html">Главная</a></li>
           <li><a class="bookmark_menu__bookmark" href="profile.html">Профиль</a></li>
-          <li><a class="bookmark_menu__bookmark" href="book_creation.html">Добавить книгу</a></li>
         </ul>
       </nav>
     </header>
@@ -38,24 +37,30 @@
           <div class="book_information">
             <img class="book_information__book_image" src="images/book_1.jpg">
             <div class="book_information__book_info_text">
-              <p><b>Название:</b> Сборник повестей<br>
-                <b>Автор:</b> Булычев Кир<br>
-                <b>Год издания:</b> 2019<br>
-                <b>Состояние:</b> Нормальное<br>
+              <p class="book_information__book_info_line">
+                <b>Название:</b> Сборник повестей</p>
+              <p class="book_information__book_info_line">
+                <b>Автор:</b> Булычев Кир</p>
+              <p class="book_information__book_info_line">
+                <b>Год издания:</b> 2019<br></p>
+              <p class="book_information__book_info_line">
+                <b>Состояние:</b> Нормальное<br></p>
+              <p class="book_information__book_info_line">
                 <b>Описание:</b> Книга из серии "Звезды советской фантастики", содержит четыре повести из цикла о Кире Орват: "Детский остров", "В куриной шкуре", "Предсказатель прошлого" и "Последние драконы".</p>
                 <div class="book_information__buttons_line">
-                  <form>
+                  <!-- <form>
                     <input class="profile_block__button" type="button" value="Изменить">
-                  </form>
+                  </form> -->
                   <form>
                     <input class="profile_block__button" type="button" value="Удалить">
                   </form>
                 </div>
               </div>
           </div>
-          <!-- <form>
-            <input class="profile_block__button" type="button" value="+ Добавить книгу">
-          </form> -->
+          <form>
+            <input id="book_to_profile_add_button" class="profile_block__button" 
+              onclick="addBookToProfile(event)" type="button" value="+ Добавить книгу">
+          </form>
         </div>
         <div class="profile_block" id="books_in_process">
           <div class="profile_block__books_in_progress_table">
