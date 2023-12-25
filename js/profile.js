@@ -28,6 +28,23 @@ function addBookToProfile(event) {
     add_button_form.parentElement.insertBefore(book_info, add_button_form);
 }
 
+function deleteBook(event){
+    var deleted_book = event.currentTarget.parentElement.parentElement.parentElement.parentElement;
+    var deleted_book_info = deleted_book.getElementsByClassName('book_information__book_info_line');
+    if (localStorage.length != 0) {
+        for (let i = 0; i < localStorage.length; i++) {
+            let id = localStorage.key(i);
+            let info = JSON.parse(localStorage.getItem(id));
+            let name_document = deleted_book_info[0].innerText.replaceAll(' ', '');
+            let name_local_storage = info['name'].replaceAll(' ', '');   
+            if (name_document === name_local_storage) {
+                localStorage.removeItem(id);
+            }
+        }
+    }
+    deleted_book.remove();
+}
+
 function handleBookInfoInputForm(event) {
     event.preventDefault();
     var i, texts, text_content;
@@ -53,6 +70,7 @@ function saveNewBookInProfile(book_info){
     delete_button.className = 'profile_block__button';
     delete_button.value = 'Удалить';
     delete_button.type = 'button';
+    delete_button.onclick = deleteBook;
     form_buttons.appendChild(delete_button);
     div_buttons.className = 'book_information__buttons_line';
     div_buttons.appendChild(form_buttons);
@@ -106,6 +124,7 @@ function createBookInfo(texts, required_input_flag) {
         delete_button.className = 'profile_block__button';
         delete_button.value = 'Удалить';
         delete_button.type = 'button';
+        delete_button.onclick = deleteBook;
         form_buttons.appendChild(delete_button);
         div_buttons.className = 'book_information__buttons_line';
         div_buttons.appendChild(form_buttons);
