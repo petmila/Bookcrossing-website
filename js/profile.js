@@ -60,7 +60,7 @@ function handleBookInfoInputForm(event) {
                 saveNewBookInProfile(event.currentTarget.parentElement);
             }
             break;
-        } else if (dropzone_image_existance != 0){
+        } else if (dropzone_image_existance != 0 & text_content[0] === 'Описание'){
             saveNewBookInProfile(event.currentTarget.parentElement); 
             break;
         }
