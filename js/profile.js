@@ -26,6 +26,7 @@ function addBookToProfile(event) {
     }
     let book_info = createBookInfo(texts, true); 
     add_button_form.parentElement.insertBefore(book_info, add_button_form);
+    Dropzone.discover();
 }
 
 function deleteBook(event){
@@ -50,13 +51,17 @@ function handleBookInfoInputForm(event) {
     var i, texts, text_content;
     let input_value = event.currentTarget.querySelector('input').value;
     texts = event.currentTarget.parentElement.getElementsByClassName('book_information__book_info_line');
+    let dropzone_image_existance = document.getElementsByClassName('dz-image').length;
     for (i = 0; i < texts.length; i++) {
-        text_content = texts[i].innerText.split([':'])
+        text_content = texts[i].innerText.split([':']);
         if (text_content[1] === '') {
             texts[i].innerHTML += ' ' + input_value;
-            if (text_content[0] === 'Описание'){
+            if (text_content[0] === 'Описание' & dropzone_image_existance != 0){
                 saveNewBookInProfile(event.currentTarget.parentElement);
             }
+            break;
+        } else if (dropzone_image_existance != 0){
+            saveNewBookInProfile(event.currentTarget.parentElement); 
             break;
         }
     }
@@ -75,13 +80,21 @@ function saveNewBookInProfile(book_info){
     div_buttons.className = 'book_information__buttons_line';
     div_buttons.appendChild(form_buttons);
     book_info.appendChild(div_buttons);
+    let dropzone_image = document.getElementsByClassName('dz-image')[0].firstChild.src;
+    document.getElementById('new-book-image-dropzone').remove();
+    let book_image = document.createElement("img");
+    book_image.className = 'book_information__book_image';
+    book_image.src = dropzone_image;
+    book_info.parentElement.insertBefore(book_image, book_info);
+
     let info_lines = book_info.getElementsByClassName('book_information__book_info_line');
     const new_book_dict = {
         name: info_lines[0].textContent,
         author: info_lines[1].textContent,
         year: info_lines[2].textContent,
         condition: info_lines[3].textContent,
-        description: info_lines[4].textContent
+        description: info_lines[4].textContent,
+        image: dropzone_image
     }
     localStorage.setItem(localStorage.length + 1, JSON.stringify(new_book_dict));
 }
@@ -100,9 +113,6 @@ function createBookInfoLine(name) {
 function createBookInfo(texts, required_input_flag) {
     let book_div = document.createElement("div");
     book_div.className = 'book_information';
-    let book_image = document.createElement("img");
-    book_image.className = 'book_information__book_image';
-    book_div.appendChild(book_image);
     let book_text = document.createElement("div");
     book_text.className = 'book_information__book_info_text';
     book_text.appendChild(createBookInfoLine(texts['name']));
@@ -117,7 +127,26 @@ function createBookInfo(texts, required_input_flag) {
         form_input.addEventListener('submit', handleBookInfoInputForm);
         form_input.appendChild(input);
         book_text.appendChild(form_input);
+
+        // dropzone form for image uploading
+        let book_image = document.createElement("form");
+        book_image.className = "dropzone dz-clickable";
+        book_image.id = 'new-book-image-dropzone';
+        book_image.action = "/file-upload";
+        let image_div = document.createElement("div");
+        image_div.className = "dz-default dz-message";
+        let image_button = document.createElement("button");
+        image_button.className = "dz-button";
+        image_button.type = "button";
+        image_button.textContent = "Выберите картинку для загрузки";
+        image_div.appendChild(image_button);
+        book_image.appendChild(image_div);
+        book_div.appendChild(book_image);
     } else {
+        let book_image = document.createElement("img");
+        book_image.className = 'book_information__book_image';
+        book_image.src = texts['image'];
+        book_div.appendChild(book_image);
         let div_buttons = document.createElement('div');
         let form_buttons = document.createElement("form");
         let delete_button = document.createElement("input");
@@ -130,6 +159,7 @@ function createBookInfo(texts, required_input_flag) {
         div_buttons.appendChild(form_buttons);
         book_text.appendChild(div_buttons);
     }
+    
     book_div.appendChild(book_text);
     return book_div;
 }

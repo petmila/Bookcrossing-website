@@ -16,6 +16,18 @@ header {
   src: url("../fonts/BradleysPen.ttf");
 }
 
+.dropzone {
+  font-size: calc(0.5em + 1vw);
+  font-family: Bradley, cursive;
+  border: 3px;
+  border: 6px solid #f18053;
+  background-color: #FFE9B0;
+  border-radius: 25px;
+  text-align: center;
+  width: 40%;
+  margin: 5px;
+}
+
 .profile_horisontal_menu__button.active, .profile_horisontal_menu__button:hover {
   background-color: #f18053;
   color: #FFE9B0;
